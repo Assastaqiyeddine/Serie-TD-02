@@ -1,39 +1,62 @@
-# Serie-TD-02
-# UMBB Boumerdès – Faculté des Sciences
-**Département de Physique**  
-**Cours : Mécanique Rationnelle – TCT et LMD-ST, Semestre 3**  
-**Exercices et Solutions – A. KADI**  
+# Serie-TD-02Boumerdès – 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Exercice Mécanique Rationnelle</title>
+<style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .lang { display: none; }
+</style>
+</head>
+<body>
 
-## Exercice 01
+<h1 id="title">UMBB Boumerdès – Faculté des Sciences</h1>
 
-**Énoncé :**
+<label for="language">Choisir la langue :</label>
+<select id="language" onchange="changeLanguage()">
+    <option value="fr">Français</option>
+    <option value="en">English</option>
+</select>
 
-Dans un repère orthonormé \(Oxyz\), deux points \(A\) et \(B\) ont pour coordonnées :  
-A(2,2,-3), B(5,3,2)
+<div class="content">
 
-Déterminer :
+    <p class="lang fr">
+        <strong>Département de Physique</strong><br>
+        Cours : Mécanique Rationnelle – TCT et LMD-ST, Semestre 3
+    </p>
+    <p class="lang en">
+        <strong>Department of Physics</strong><br>
+        Course: Rational Mechanics – TCT and LMD-ST, Semester 3
+    </p>
 
-1. Le moment du vecteur glissant \(\vec{AB}\) par rapport au centre O du repère  
-2. Le moment du vecteur glissant \(\vec{AB}\) par rapport à la droite Δ passant par O et C(2,2,1)
+    <h2 class="lang fr">Exercice 01</h2>
+    <h2 class="lang en">Exercise 01</h2>
 
----
+    <p class="lang fr">
+        Dans un repère orthonormé Oxyz, deux points A(2,2,-3) et B(5,3,2) sont donnés. <br>
+        Déterminer le moment du vecteur glissant AB par rapport au point O et par rapport à la droite Δ passant par O et C(2,2,1).
+    </p>
 
-**Solution :**
+    <p class="lang en">
+        In an orthonormal coordinate system Oxyz, two points A(2,2,-3) and B(5,3,2) are given. <br>
+        Determine the moment of the sliding vector AB relative to point O and relative to the line Δ passing through O and C(2,2,1).
+    </p>
 
-### 1️⃣ Moment par rapport à O
-\[
-\vec{AB} = (3,1,5), \quad \overrightarrow{OA} = (2,2,-3)
-\]
+</div>
 
-\[
-\vec{M}_O = \overrightarrow{OA} \wedge \overrightarrow{AB} = 13i - 19j - 4k
-\]
+<script>
+function changeLanguage() {
+    const lang = document.getElementById('language').value;
+    document.querySelectorAll('.lang').forEach(el => {
+        el.style.display = el.classList.contains(lang) ? 'block' : 'none';
+    });
+}
 
-### 2️⃣ Moment par rapport à la droite Δ
-\[
-\overrightarrow{OC} = (2,2,1), \quad \vec{u} = \frac{1}{3}(2,2,1)
-\]
+// Initialisation par défaut (français)
+changeLanguage();
+</script>
 
-\[
-\vec{M}_\Delta = \vec{M}_O - (\vec{M}_O \cdot \vec{u}) \vec{u} = \frac{149}{9}i - \frac{139}{9}j - \frac{20}{9}k
-\]
+</body>
+</html>
